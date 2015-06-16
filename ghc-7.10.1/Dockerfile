@@ -37,12 +37,13 @@ RUN curl --silent -O https://www.haskell.org/cabal/release/cabal-install-1.22.2.
   && tar --strip-component=1 -xzf cabal-install-1.22.2.0.tar.gz \
   && rm cabal-install-1.22.2.0.tar.gz \
   && /usr/src/cabal/bootstrap.sh \
-  && cp /root/.cabal/bin/cabal /usr/local/bin \
   && for pkg in `ghc-pkg --user list  --simple-output`; do ghc-pkg unregister --force $pkg; done \
-  && rm -rf /root/.cabal \
   && rm -rf /usr/src/cabal \
-  && cabal --version
+  && /root/.cabal/bin/cabal --version
+
+WORKDIR /
+ENV PATH=/root/.cabal/bin:$PATH
+RUN cabal update
 
 # Done
-WORKDIR /
 
