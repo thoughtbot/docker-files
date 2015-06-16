@@ -6,6 +6,7 @@ RUN cabal update
 RUN cabal install alex
 RUN cabal install happy
 RUN cabal install yesod-bin
+RUN export PATH=/root/.cabal/bin:$PATH
 #
 # Done
 WORKDIR /
