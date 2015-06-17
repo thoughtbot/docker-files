@@ -1,6 +1,10 @@
 FROM thoughtbot/ghc:7.10.1-1
 MAINTAINER Tony DiPasquale <tony@thoughtbot.com>
 
+# Install postgres client
+RUN apt-get update
+RUN apt-get install -y postgresql-client
+
 # Install cabal dependencies
 RUN mkdir -p /opt/tools
 WORKDIR /opt/tools
