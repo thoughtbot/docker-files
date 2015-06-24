@@ -18,8 +18,14 @@ You can use an image as a base image in a `Dockerfile`:
 
 ## Editing
 
-To update an image, edit the appropriate Dockerfile, build it locally, and push
-a new version to Dockerhub.
+To update an image:
+
+1. Edit the appropriate Dockerfile, for example `haskell/yesod/Dockerfile`
+2. Build it locally: `docker build -t thoughtbot/yesod:YESOD_VERSION-BUILD_VERSION`
+  * `YESOD_VERSION` should be kept up to date. Currently at 1.4.10.
+  * `BUILD_VERSION` is out our incrementing verison of builds.
+  * Also tag a `latest` release: `docker tag thoughtbot/yesod:YESOD_VERSION-BUILD_VERSION thoughtbot/yesod:latest`
+3. Push it up to docker using `docker push thoughtbot/yesod`
 
 Everybody has their own Dockerhub account. If you need to be invited to the
 thoughtbot organization, just ask.
