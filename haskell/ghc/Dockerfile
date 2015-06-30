@@ -45,5 +45,7 @@ WORKDIR /
 ENV PATH=/root/.cabal/bin:$PATH
 RUN cabal update
 
+CMD ghci
+
 # Done
 
