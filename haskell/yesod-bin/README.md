@@ -1,10 +1,10 @@
-# yesod-bin docker image
+# yesod-bin Docker Image
 
 Use this image to gain quick access to the `yesod` command.
 
 ## Usage
 
-Initialize a new yesod app:
+Initialize a new Yesod app:
 ```
-docker run -iv $PWD:/src thoughtbot/yesod-bin init
+docker run --rm -iv $PWD:/src thoughtbot/yesod-bin init
 ```

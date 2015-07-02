@@ -1,6 +1,6 @@
-# yesod docker image
+# Yesod Docker Image
 
-Use this image as the base image for your yesod based applications.
+Use this image as the base image for your Yesod based applications.
 
 ## Usage
 
@@ -64,8 +64,8 @@ Where `DATABASE_NAME` is the name of your database specified in your
 
 Finally, run your project with `docker-compose up`.
 
-Your project should spin up and yesod will compile and run. You can now edit
-files on your machine and yesod will recompile every time a file changes.
+Your project should spin up and Yesod will compile and run. You can now edit
+files on your machine and Yesod will recompile every time a file changes.
 
 ### Testing
 
