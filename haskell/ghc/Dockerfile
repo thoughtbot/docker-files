@@ -2,7 +2,8 @@ FROM heroku/cedar:14
 MAINTAINER Tony DiPasquale <tony@thoughtbot.com>
 
 # Dependencies
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN apt-get update \
+  && apt-get install -y --no-install-recommends \
     bzip2 \
     ca-certificates \
     curl \
@@ -13,6 +14,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     make \
     patch \
     zlib1g-dev \
+  && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
 # GHC
