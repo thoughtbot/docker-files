@@ -1,4 +1,4 @@
-FROM thoughtbot/ghc:7.10.1-1
+FROM thoughtbot/ghc:7.10.3
 MAINTAINER Tony DiPasquale <tony@thoughtbot.com>
 
 # Install postgres client
